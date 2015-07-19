@@ -22,9 +22,9 @@ Person.include({
   }
 });
 
-//Метод save нельзя вызвать через класс Person
+//Метод save НЕ доступен из класса
 Person.save(4); //TypeError: Person.save is not a function
 
-//Метод save можно вызвать через экземпляр класса Person
+//Метод save доступен из экземпляра класса
 var leo = new Person('Leo');
 leo.save(7); //Saving item #7
