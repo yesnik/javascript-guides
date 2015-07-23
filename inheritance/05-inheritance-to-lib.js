@@ -18,3 +18,20 @@ var Class = function (parent) {
   //Методы include, extend...
   return klass;
 }
+
+
+var Animal = new Class;
+Animal.prototype.move = function () {
+  return 'Я двигаюсь...';
+}
+
+//Создаем класс Dog, имеющий родительский класс - Animal
+var Dog = new Class(Animal);
+Dog.prototype.wag = function () {
+  return 'Я виляю хвостом...';
+}
+
+var sharik = new Dog;
+//Экземпляры класса Dog наследуют свойства класса Animal
+sharik.wag(); //Я двигаюсь...
+sharik.move(); //Я виляю хвостом...
