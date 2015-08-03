@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Фаза захвата</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!-- Highlight js -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+<!-- Highlight js (end) -->
+
+</head>
+<body>
+
+  <h1>Распространение событий в javascript</h1>
+  <h2>Остановка распространения события в фазе захвата</h2>
+  <p>Если обработчики реагируют на фазу захвата, то при клике на <code>inner</code> сначала сработает <code>handler_outer</code>, затем <code>handler_inner</code>.</p>
+  <p>Чтобы <code>handler_inner</code> не сработал, нужно предотвратить распространение события при помощи выражения <code>e.stopPropagation()</code> в обработчике <code>handler_outer</code></p>
+  
+  <div id="outer">
+    <p>#outer</p>
+    <div id="inner">
+      <p>#inner</p>
+    </div>
+  </div>
+
+<h3>Код</h3>
+
+<pre><code class="javascript">
+var outer = document.getElementById('outer');
+var inner = document.getElementById('inner');
+
+var handler_outer = function (e) {
+  alert('outer');
+  //Остановим распространение события
+  e.stopPropagation();
+};
+
+var handler_inner = function () {
+  alert('inner');
+};
+
+//Обработчик сработает захвате события (т.к. третий параметр - true)
+outer.addEventListener('click', handler_outer, true);
+inner.addEventListener('click', handler_inner, true);
+</code></pre>
+
+
+  <script type="text/javascript">
+    var outer = document.getElementById('outer');
+    var inner = document.getElementById('inner');
+
+    var handler_outer = function (e) {
+      alert('outer');
+      //Остановим распространение события
+      e.stopPropagation();
+    };
+
+    var handler_inner = function () {
+      alert('inner');
+    };
+
+    //Обработчик сработает захвате события (т.к. третий параметр - true)
+    outer.addEventListener('click', handler_outer, true);
+    inner.addEventListener('click', handler_inner, true);
+  </script>
+
+  <!-- Highlight js activation -->
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
