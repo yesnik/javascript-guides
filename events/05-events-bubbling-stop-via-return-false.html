@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>return false не остановит событие</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!-- Highlight js -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+<!-- Highlight js (end) -->
+
+</head>
+<body>
+
+  <h1>Распространение событий в javascript</h1>
+  <h2>return false не остановит событие</h2>
+
+  <p>Если обработчики реагируют на фазу всплытия, то при клике на <code>inner</code> сначала сработает <code>handler_inner</code>, затем <code>handler_outer</code>.</p>
+
+  <p>Если в обработчике <code>handler_inner</code> вернуть false, то это не остановит событие.</p>
+  
+  <div id="outer">
+    <p>#outer</p>
+    <div id="inner">
+      <p>#inner</p>
+    </div>
+  </div>
+
+<h3>Код</h3>
+
+<pre><code class="javascript">
+var outer = document.getElementById('outer');
+var inner = document.getElementById('inner');
+
+var handler_outer = function () {
+  alert('outer');
+};
+
+var handler_inner = function (e) {
+  alert('inner');
+  //Это не остановит событие
+  return false;
+};
+
+//Обработчик сработает при всплытии события
+outer.addEventListener('click', handler_outer, false);
+inner.addEventListener('click', handler_inner, false);
+</code></pre>
+
+
+  <script type="text/javascript">
+    var outer = document.getElementById('outer');
+    var inner = document.getElementById('inner');
+
+    var handler_outer = function () {
+      alert('outer');
+    };
+
+    var handler_inner = function (e) {
+      alert('inner');
+      //Это не остановит событие
+      return false;
+    };
+
+    //Обработчик сработает при всплытии события
+    outer.addEventListener('click', handler_outer, false);
+    inner.addEventListener('click', handler_inner, false);
+  </script>
+
+  <!-- Highlight js activation -->
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
