@@ -1,4 +1,6 @@
-//Пример 1.1. Передаем функцию-обработчик напрямую
+### Пример 1. Передаем функцию-обработчик напрямую
+#### 1.1. Контекст при вызове функции-обработчика не меняем
+```javascript
 var App = {
   name: 'Johny',
   titleClicked: function () {
@@ -15,9 +17,11 @@ App.init();
 //При клике на элемент:
 // this:  <h2 id="page_title">
 // this.name: undefined, т.к. ф-ция self.titleClicked вызвана в контексте элемента h2.
+```
 
+#### 1.2. Используем bind(), чтобы указать контекст, в котором будет вызываться функция-обработчик
 
-//Пример 1.2. Используем bind(), чтобы указать контекст, в котором будет вызываться функция-обработчик
+```javascript
 var App = {
   name: 'Johny',
   titleClicked: function () {
@@ -33,10 +37,13 @@ App.init();
 //При клике на элемент:
 //this:  Object { name="Johny",  titleClicked=function(),  init=function()}
 //this.name: Johny
+```
 
+### Пример 2. Вызов функции-обработчика внутри анонимной функции
 
-//Пример 2.1. Вызов функции-обработчика внутри анонимной функции.
-//            Используем self, чтобы получить доступ к исходному объекту App
+#### 2.1. Используем self, чтобы получить доступ к исходному объекту App
+
+```javascript
 var App = {
   name: 'Johny',
   titleClicked: function () {
@@ -57,10 +64,11 @@ App.init();
 //При клике на элемент:
 //this: Object { name="Johny",  titleClicked=function(),  init=function()}
 //this.name: Johny
+```
 
+#### 2.2. Обращаемся к исходному объекту по его имени - App
 
-//Пример 2.2. Вызов функции-обработчика внутри анонимной функции. 
-//            Обращение к исходному объекту по его имени - App
+```javascript
 var App = {
   name: 'Johny',
   titleClicked: function () {
@@ -80,3 +88,4 @@ App.init();
 //При клике на элемент:
 //this:  Object { name="Johny",  titleClicked=function(),  init=function()}
 //this.name: Johny
+```
