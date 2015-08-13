@@ -35,12 +35,16 @@ var PubSub = {
     return this;
   }
 };
+```
 
+Здесь не используется механизм распространения событий (фаза всплытия, фаза захвата), а просто создается единое хранилище колбэков и предоставляется единый интерфейс доступа к ним:
+
+```javascript
 //Подписываемся на событие
 PubSub.subscribe('user:registered', function (name) {
   console.log('Welcome, ' + name);
 });
 
 //Публикуем событие. Подписчики на него реагируют
-PubSub.publish('user:registered', 'Kenny') //Welcome, Kenny
+PubSub.publish('user:registered', 'Kenny'); //Welcome, Kenny
 ```
