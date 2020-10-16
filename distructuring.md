@@ -7,6 +7,9 @@ const [a, b] = [1, 2]
 console.log(a) // 1
 console.log(b) // 2
 a = 3 // TypeError: Assignment to constant variable
+
+const [, ,c] = [1, 2, 3]
+console.log(c) // 3
 ```
 
 ## Objects
