@@ -1,5 +1,21 @@
 # Classes
 
+## Attrs and methods
+
+```js
+class Robot {
+  type = 'T100'
+  
+  getType = () => {
+    return this.type
+  }
+}
+const terminator = new Robot()
+console.log(terminator.getType()) // "T100"
+```
+
+## Constructor
+
 ```js
 class Cat {
   constructor(name) {
