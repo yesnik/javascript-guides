@@ -2,13 +2,15 @@
 
 ```js
 class Cat {
-  name = "Tom"
-  walk = () => {
-    return 'Walking'
+  constructor(name) {
+    this.name = name
+  }
+  getTitle = () => {
+    return `Cat ${this.name}`
   }
 }
 
-tom = new Cat()
-tom.walk() // 'Walking'
+tom = new Cat('Tom')
 tom.name // 'Tom'
+tom.getTitle() // 'Cat Tom'
 ```
