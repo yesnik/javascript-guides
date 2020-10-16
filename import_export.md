@@ -1,6 +1,6 @@
-# Modern Javascript
+# Import, Export
 
-## Import, exports
+## Default export
 
 File `student.js`:
 
@@ -9,19 +9,31 @@ const student = {name: 'Kenny'}
 
 export default student
 ```
+
+## Named export
+
+We export several parts.
+
 File `utils.js`:
 
 ```js
 export const validate = () => { // ... }
 export const clear = () => { // ... }
 ```
-Import these files in the `app.js`:
+
+## Import
+
+Name in the receiving file is up to us.
 
 ```js
-// Name in the receiving file is up to us
+// app.js
 import student from './student.js'
 import pupil from './student.js'
+```
 
-// We define what part of the file we want to import
+We define what part of the file we want to import.
+
+```js
+// app.js
 import { validate } from './utils.js'
 ```
