@@ -1,5 +1,10 @@
 # Components
 
+Type of components:
+
+- **Stateful**. Manage state.
+- **Stateless**. Don't manage state.
+
 ## Pass params
 
 ```js
