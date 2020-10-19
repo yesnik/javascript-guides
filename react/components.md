@@ -72,17 +72,19 @@ export default App;
 
 ### Pass params to method
 
-*Way 1*. With arrow function:
+
+*Way 1*. With `bind`.
+
+```js
+<button onClick={this.switchNameHandler.bind(this, 'Lara')}>Switch name</button>
+```
+
+*Way 2*. With arrow function. *Not recommended* because it can be inefficient.
 
 ```js
 <button onClick={() => this.switchNameHandler('Lara')}>Switch name</button>
 ```
 
-*Way 2*. With `bind`:
-
-```js
-<button onClick={this.switchNameHandler.bind(this, 'Lara')}>Switch name</button>
-```
 
 ## Pass params
 
