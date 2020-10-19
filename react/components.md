@@ -2,8 +2,8 @@
 
 Type of components:
 
-- **Stateful**. Manage state.
-- **Stateless**. Don't manage state.
+- **Stateful** (container, smart). Manage state.
+- **Stateless** (presentational, dumb). Don't manage state. Try to create components of this type.
 
 ## Pass params
 
