@@ -9,6 +9,10 @@ import styled from 'styled-components'
 
 const RedButton = styled.button`
     border: 3px solid red;
+    
+    &:hover: {
+        background-color: yellow;
+    }
 `
 
 <RedButton>Press me</RedButton>
