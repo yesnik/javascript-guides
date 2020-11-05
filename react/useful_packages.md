@@ -4,7 +4,7 @@
 
 [Styled components](https://styled-components.com/) allows us to use CSS in js:
 
-```js
+```jsx
 import styled from 'styled-components'
 
 const RedButton = styled.button`
