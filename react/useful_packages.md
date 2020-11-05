@@ -10,7 +10,7 @@ import styled from 'styled-components'
 const RedButton = styled.button`
     border: 3px solid red;
     
-    &:hover: {
+    &:hover {
         background-color: yellow;
     }
 `
