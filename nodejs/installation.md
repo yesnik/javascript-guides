@@ -19,6 +19,10 @@ Once the NodeSource repository is enabled, install Node.js and npm by typing:
 sudo yum install nodejs
 ```
 
+### NPM proxy
+
+See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/proxy.md#npm-proxy-settings)
+
 ### Update npm
 
 ```bash
