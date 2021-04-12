@@ -29,6 +29,8 @@ See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/prox
 
 ### Update npm
 
+[NPM](https://github.com/npm/cli) is a JavaScript package manager. 
+
 ```bash
 sudo npm install -g npm
 
