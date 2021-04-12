@@ -1,4 +1,8 @@
-## Installation
+# Installation
+
+### From official site
+
+Download installer: https://nodejs.org/
 
 ### Add NodeSource yum repository
 
@@ -29,7 +33,7 @@ See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/prox
 sudo npm install -g npm
 
 npm -v
-#=> 6.12.1
+#=> 7.9.0
 ```
 
 ### Update node
