@@ -11,6 +11,13 @@
   npm remove @babel/core @babel/node
   ```
 
+- Show versions of installed packages
+  ```bash
+  npm list
+  npm list -g
+  npm list jquery
+  ```
+
 - View available versions of the package
   ```bash
   npm view react versions
