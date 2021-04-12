@@ -18,6 +18,11 @@
   npm list jquery
   ```
 
+- Show info about package from NPM repo
+  ```bash
+  npm view react
+  ```
+
 - View available versions of the package
   ```bash
   npm view react versions
