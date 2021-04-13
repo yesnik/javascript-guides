@@ -16,6 +16,10 @@ Create `.babelrc` configuration file and enable some plugins. To start, you can 
 }
 ```
 
+### Date and Time
+
+- [date-fns](https://github.com/date-fns/date-fns) - work with dates
+
 ### Dotenv
 
 [Dotenv](https://github.com/motdotla/dotenv) loads environment variables from a `.env` file into `process.env`
