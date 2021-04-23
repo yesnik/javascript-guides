@@ -7,6 +7,7 @@ Node.js treats JavaScript code as CommonJS modules by default. We can tell Node.
 ### Define module
 
 ```js
+// File calc.js
 function addTwo(num) {
   return num + 2;
 }
@@ -24,6 +25,7 @@ Functions and objects are added to the root of a module by specifying additional
 ### Use module
 
 ```js
+// File index.js
 const calc = require('./calc.js');
 
 console.log(calc.addTwo(10)); // 12
@@ -32,29 +34,32 @@ console.log(calc.addThree(10)); // 13
 
 ## ECMAScript modules
 
-- import
-- exports
+Node.js will treat the following as ES modules:
 
-The `--experimental-modules` flag can be used to enable support for ECMAScript modules (ES modules). 
-To make this flag work with `.js` files we need to include `"type": "module"` into project's `package.json`:
+- Files ending in `.mjs`.
+- Files ending in `.js` when the nearest parent `package.json` file contains a top-level `"type": "module"`.
 
-```json
-{
-  "name": "hello-two",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "nodemon --experimental-modules"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.1"
-  },
-  "type": "module"
+### Define module
+
+```js
+// File calc.js
+function addTwo(num) {
+  return num + 2;
 }
+
+function addThree(num) {
+  return num + 3;
+}
+
+export { addTwo, addThree };
+```
+
+### Use module
+
+```js
+// File index.js
+import { addTwo, addThree } from './calc.js';
+
+console.log(addTwo(10)); // 12
+console.log(addThree(10)); // 13
 ```
