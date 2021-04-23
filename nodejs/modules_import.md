@@ -1,5 +1,7 @@
 # Modules import
 
+Node.js treats JavaScript code as CommonJS modules by default. We can tell Node.js to treat JavaScript code as ECMAScript modules via the `.mjs` file extension, the `package.json` `"type"` field, or the `--input-type` flag.
+
 ## CommonJS Modules
 
 ### Define module
