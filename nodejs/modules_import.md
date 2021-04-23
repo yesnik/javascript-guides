@@ -1,11 +1,34 @@
 # Modules import
 
-## CommonJS
+## CommonJS Modules
 
-- require
-- module.exports
+### Define module
 
-## ES6
+```js
+function addTwo(num) {
+  return num + 2;
+}
+
+function addThree(num) {
+  return num + 3;
+}
+
+exports.addTwo = addTwo;
+exports.addThree = addThree;
+```
+
+Functions and objects are added to the root of a module by specifying additional properties on the special `exports` object.
+
+### Use module
+
+```js
+const calc = require('./calc.js');
+
+console.log(calc.addTwo(10)); // 12
+console.log(calc.addThree(10)); // 13
+```
+
+## ECMAScript modules
 
 - import
 - exports
