@@ -1,5 +1,5 @@
 
-## Console commands
+## NPM commands
 
 - Install package
   ```bash
@@ -41,8 +41,3 @@
   # Local installation
   npm bin
   ```
-
-- Show outdated packages
-```bash
-yarn outdated
-```
