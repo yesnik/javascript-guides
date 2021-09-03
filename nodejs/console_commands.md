@@ -41,3 +41,8 @@
   # Local installation
   npm bin
   ```
+
+- Show outdated packages
+```bash
+yarn outdated
+```
