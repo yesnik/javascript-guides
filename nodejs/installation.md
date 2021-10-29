@@ -47,7 +47,7 @@ sudo n stable
 sudo n latest
 
 node -v
-#=> v14.16.1
+#=> v17.0.1
 ```
 
 ### Start project
