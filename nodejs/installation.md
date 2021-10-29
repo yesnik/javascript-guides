@@ -6,13 +6,12 @@ Download installer: https://nodejs.org/
 
 ### Add NodeSource yum repository
 
-The current LTS version of Node.js is version 10.x. 
-If you want to install version 8 just change setup_10.x with setup_8.x in the command below.
+If you want to install version 17 define `setup_17.x` in the command below.
 
-Run the following curl command to add the NodeSource yum repository to your system:
+Run the following curl command to add the [NodeSource repository](https://github.com/nodesource/distributions) to your system:
 
 ```bash
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_17.x | sudo bash -
 ```
 
 ### Install Node.js and npm
