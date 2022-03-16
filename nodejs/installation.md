@@ -1,8 +1,35 @@
 # Installation
 
+### NPM proxy
+
+See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/proxy.md#npm-proxy-settings)
+
 ### From official site
 
 Download installer: https://nodejs.org/
+
+### Update npm
+
+[NPM](https://github.com/npm/cli) is a JavaScript package manager. 
+
+```bash
+sudo npm install -g npm
+
+npm -v
+#=> 7.9.0
+```
+
+### Update node via `n`
+
+```bash
+sudo npm install -g n
+
+# For the latest stable version
+sudo n stable
+
+# For the latest LTS version
+sudo n latest
+```
 
 ### Add NodeSource yum repository
 
@@ -20,34 +47,6 @@ Once the NodeSource repository is enabled, install Node.js and npm by typing:
 
 ```bash
 sudo yum install nodejs
-```
-
-### NPM proxy
-
-See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/proxy.md#npm-proxy-settings)
-
-### Update npm
-
-[NPM](https://github.com/npm/cli) is a JavaScript package manager. 
-
-```bash
-sudo npm install -g npm
-
-npm -v
-#=> 7.9.0
-```
-
-### Update node
-
-```bash
-sudo npm install -g n
-sudo n stable
-
-# If you want latest node
-sudo n latest
-
-node -v
-#=> v17.0.1
 ```
 
 ### Start project
