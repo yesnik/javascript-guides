@@ -31,3 +31,14 @@ const {name} = {name: 'Kenny', age: 19}
 console.log(name)
 console.log(age) // ReferenceError: age is not defined
 ```
+```js
+state = {a: 1, b: 2}
+
+newState = {
+  ...state,
+  b: 22,
+  c: 3
+}
+
+newState // {a: 1, b: 22, c: 3}
+```
