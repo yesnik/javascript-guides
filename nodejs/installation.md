@@ -4,9 +4,11 @@
 
 See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/proxy.md#npm-proxy-settings)
 
-### From official site
+### Install npm
 
-Download installer: https://nodejs.org/
+For Ubuntu: `sudo apt install npm`
+
+See below to install node via `n`.
 
 ### Update npm
 
