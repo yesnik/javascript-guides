@@ -18,7 +18,7 @@ See below to install node via `n`.
 sudo npm install -g npm
 
 npm -v
-#=> 7.9.0
+#=> 8.11.0
 ```
 
 ### Update node via `n`
