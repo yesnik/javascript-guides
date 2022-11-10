@@ -37,6 +37,16 @@ import Student from './student.js'; // not {Student}, just Student
 import MyStudent from './student.js'; // we can give a custom name
 ```
 
+## Import conventions
+
+Team members may use different names to import the same thing, and that's not good. There's a rule that imported variables should correspond to file names:
+
+```js
+import User from './user.js';
+import LoginForm from './loginForm.js';
+import hello from '/path/to/hello.js';
+```
+
 ## Script type "module"
 
 As modules support special keywords and features, we must tell the browser that a script should be treated as a module, by using the attribute `<script type="module">`. See `index.html`:
