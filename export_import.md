@@ -2,6 +2,8 @@
 
 The language-level module system appeared in the standard in 2015, gradually evolved since then, and is now supported by all major browsers and in Node.js.
 
+## Named export
+
 ```js
 // form.js
 export const validate = () => { return 'validating'; }
@@ -46,6 +48,8 @@ import User from './user.js';
 import LoginForm from './loginForm.js';
 import hello from '/path/to/hello.js';
 ```
+
+Some teams prefer to always use *named exports*. Even if only a single thing is exported, it's still exported under a name, without default.
 
 ## Script type "module"
 
