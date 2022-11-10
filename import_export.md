@@ -1,5 +1,7 @@
 # Import, Export
 
+The language-level module system appeared in the standard in 2015, gradually evolved since then, and is now supported by all major browsers and in Node.js.
+
 ## Default export
 
 File `student.js`:
