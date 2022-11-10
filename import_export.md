@@ -25,6 +25,17 @@ export const clear = () => { // ... }
 
 ## Import
 
+As modules support special keywords and features, we must tell the browser that a script should be treated as a module, by using the attribute `<script type="module">`. See `index.html`:
+
+```html
+<!doctype html>
+<script type="module">
+  import {greeting} from './greeting.js';
+
+  document.body.innerHTML = greeting('Kenny');
+</script>
+```
+
 Name in the receiving file is up to us.
 
 ```js
