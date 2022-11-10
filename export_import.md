@@ -1,6 +1,22 @@
-# Import, Export
+# Export, Import
 
 The language-level module system appeared in the standard in 2015, gradually evolved since then, and is now supported by all major browsers and in Node.js.
+
+```js
+// form.js
+export const validate = () => { return 'validating'; }
+export const clear = () => { return 'clear'; }
+```
+
+Import what we want:
+
+```js
+// app.js
+import {validate} from './form.js';
+import {validate as check} from './form.js';
+import {validate, clear} from './form.js';
+import * as f from './form.js';
+```
 
 ## Default export
 
@@ -14,28 +30,14 @@ export default class Student {
 }
 ```
 
-And then import it *without* curly braces:
+We can import it *without* curly braces:
 
 ```js
 import Student from './student.js'; // not {Student}, just Student
-
-new Student('Lora');
+import MyStudent from './student.js'; // we can give a custom name
 ```
 
-**Note:** `import` needs curly braces for named exports and doesn’t need them for the default one.
-
-## Named export
-
-We export several parts.
-
-File `utils.js`:
-
-```js
-export const validate = () => { // ... }
-export const clear = () => { // ... }
-```
-
-## Import
+## Script type "module"
 
 As modules support special keywords and features, we must tell the browser that a script should be treated as a module, by using the attribute `<script type="module">`. See `index.html`:
 
@@ -46,22 +48,4 @@ As modules support special keywords and features, we must tell the browser that 
 
   document.body.innerHTML = greeting('Kenny');
 </script>
-```
-
-Name in the receiving file is up to us.
-
-```js
-// app.js
-import student from './student.js'
-import pupil from './student.js'
-```
-
-We define what part of the file we want to import.
-
-```js
-// app.js
-import {validate} from './utils.js'
-import {validate as Validator} from './utils.js'
-import {sayHi as hi, sayBye as bye} from './say.js';
-import * as utils from './utils.js'
 ```
