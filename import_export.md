@@ -4,13 +4,25 @@ The language-level module system appeared in the standard in 2015, gradually evo
 
 ## Default export
 
-File `student.js`:
+Modules provide a special `export default` ("the default export") syntax to make the "one thing per module" way look better.
 
 ```js
-const student = {name: 'Kenny'}
-
-export default student
+export default class Student {
+  constructor(name) {
+    this.name = name;
+  }
+}
 ```
+
+And then import it *without* curly braces:
+
+```js
+import Student from './student.js'; // not {Student}, just Student
+
+new Student('Lora');
+```
+
+**Note:** `import` needs curly braces for named exports and doesn’t need them for the default one.
 
 ## Named export
 
