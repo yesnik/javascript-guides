@@ -48,7 +48,8 @@ We define what part of the file we want to import.
 
 ```js
 // app.js
-import { validate } from './utils.js'
-import { validate as Validator } from './utils.js'
+import {validate} from './utils.js'
+import {validate as Validator} from './utils.js'
+import {sayHi as hi, sayBye as bye} from './say.js';
 import * as utils from './utils.js'
 ```
