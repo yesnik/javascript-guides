@@ -150,3 +150,26 @@ function MyApp() {
   );
 }
 ```
+
+### `{}` to escape to JS
+
+Curly braces let you "escape back" into JavaScript so that you can embed some variable:
+
+```jsx
+function Header(props) {
+  return (
+    <h1>{props.title}</h1>
+  );
+}
+```
+
+Use curly braces instead of quotes to "escape into JavaScript" from JSX attributes:
+
+```jsx
+return (
+  <img
+    className="user"
+    src={user.imageUrl}
+  />
+);
+```
