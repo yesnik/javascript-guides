@@ -135,3 +135,18 @@ export default function App() {
   );
 }
 ```
+
+## JSX in components
+
+Component can't return multiple JSX tags. You have to wrap them into a shared parent, like a `<div>...</div>` or an empty `<>...</>` wrapper:
+
+```jsx
+function MyApp() {
+  return (
+    <>
+      <h1>Hello, world!</h1>
+      <MyInput name="student" placeholder="How are you?" />
+    </>
+  );
+}
+```
