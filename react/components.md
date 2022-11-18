@@ -85,8 +85,9 @@ export default App;
 <button onClick={() => this.switchNameHandler('Lara')}>Switch name</button>
 ```
 
-
 ## Pass params
+
+### With props
 
 ```js
 // src/Person/Person.js
@@ -111,4 +112,26 @@ Usage:
     My hobbies: Lego
 </Person>
 <Person name="Kenny" age="19" />
+```
+
+### With destruct
+
+With destructuring it will assign the matching property names/values to the passed in variables. 
+The names must match with the properties.
+
+```jsx
+function MyInput({name, placeholder}) {
+  return (
+    <input type="text" name={name} placeholder={placeholder} />
+  );
+}
+
+export default function App() {
+  return (
+    <div>
+      <h1>Hello!</h1>
+      <MyInput name="student" placeholder="How are you?" />
+    </div>
+  );
+}
 ```
