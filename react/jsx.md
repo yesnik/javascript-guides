@@ -145,12 +145,8 @@ We can give them any names, but the *convention* is to call them like `[somethin
 We have 2 buttons. Click on each button should update the counter and display it's value on each button.
 
 ```jsx
-export function MyButton({ title, counter, onClick }) {
-  return (
-    <button className="my-button" onClick={onClick}>
-      {title + ' , counter: ' + counter}
-    </button>
-  );
+export function MyButton({ counter, onClick }) {
+  return <button onClick={onClick}>{'Counter: ' + counter}</button>;
 }
 ```
 
@@ -166,9 +162,10 @@ export default function App() {
 
   return (
     <div>
-      <MyButton counter={counter} title="Submit" onClick={handleClick} />
+      <ProductList products={products} />
+      <MyButton counter={counter} onClick={handleClick} />
       <br />
-      <MyButton counter={counter} title="Submit" onClick={handleClick} />
+      <MyButton counter={counter} onClick={handleClick} />
     </div>
   );
 }
