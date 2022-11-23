@@ -1,5 +1,43 @@
 # JSX
 
+## Return only single element
+
+Component can't return multiple JSX tags. You have to wrap them into a shared parent, like a `<div>...</div>` or an empty `<>...</>` wrapper:
+
+```jsx
+function MyApp() {
+  return (
+    <>
+      <h1>Hello, world!</h1>
+      <MyInput name="student" placeholder="How are you?" />
+    </>
+  );
+}
+```
+
+## `{}` to escape to JS
+
+Curly braces let you "escape back" into JavaScript so that you can embed some variable:
+
+```jsx
+function Header(props) {
+  return (
+    <h1>{props.title}</h1>
+  );
+}
+```
+
+Use curly braces instead of quotes to "escape into JavaScript" from JSX attributes:
+
+```jsx
+return (
+  <img
+    className="user"
+    src={user.imageUrl}
+  />
+);
+```
+
 ## Conditional rendering
 
 ```jsx
