@@ -32,7 +32,10 @@ export default class Student {
 }
 ```
 
-We can import it *without* curly braces:
+We can:
+
+- import this module *without* curly braces
+- use different variable name, not only `Student`
 
 ```js
 import Student from './student.js'; // not {Student}, just Student
