@@ -80,24 +80,29 @@ authorized && (
 Use the `map()` function to transform an array of products into an array of `<li>` items:
 
 ```jsx
-export default function App() {
-  const products = [
-    { title: 'Book', id: 1 },
-    { title: 'Pen', id: 2 },
-    { title: 'Eraser', id: 3 },
-  ];
-  
-  const listItems = products.map(product =>
-    <li key={product.id}>
-      {product.title}
-    </li>
-  );
-  
-  return (
-    <ul>{listItems}</ul>
-  );
+export function ProductList({ products }) {
+  const items = products.map((product) => (
+    <li key={product.id}>{product.title}</li>
+  ));
+
+  return <ul>{items}</ul>;
 }
 ```
+
+Use in the App:
+
+```jsx
+export default function App() {
+  const products = [
+    { id: 1, title: 'Book' },
+    { id: 2, title: 'Pen' },
+    { id: 3, title: 'Pencil' },
+  ];
+
+  return <ProductList products={products} />;
+}
+```
+
 **Important:** `<li>` must have a `key` attribute. 
 For each item in a list, we should pass a string or a number that uniquely identifies that item among its siblings.
 
