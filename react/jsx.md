@@ -118,7 +118,7 @@ export default function MyButton() {
 }
 ```
 
-## Add state to component
+## Add state to component with `useState` hook
 
 Component can "remember" some information and display it:
 
@@ -135,5 +135,41 @@ export default function MyButton() {
   return <button onClick={handleClick}>Votes: {votes}</button>;
 }
 ```
-You will get two things from `useState`: the current state (`votes`), and the function that lets you update it (`setVotes`). 
-You can give them any names, but the *convention* is to call them like `[something, setSomething]`.
+Functions starting with `use` are called *Hooks*. `useState` is a built-in Hook provided by React. 
+
+We will get two things from `useState`: the current state (`votes`), and the function that lets you update it (`setVotes`). 
+We can give them any names, but the *convention* is to call them like `[something, setSomething]`.
+
+## Lift state up
+
+We have 2 buttons. Click on each button should update the counter and display it's value on each button.
+
+```jsx
+export function MyButton({ title, counter, onClick }) {
+  return (
+    <button className="my-button" onClick={onClick}>
+      {title + ' , counter: ' + counter}
+    </button>
+  );
+}
+```
+
+App:
+
+```jsx
+export default function App() {
+  const [counter, setCounter] = useState(0);
+
+  function handleClick() {
+    setCounter(counter + 1);
+  }
+
+  return (
+    <div>
+      <MyButton counter={counter} title="Submit" onClick={handleClick} />
+      <br />
+      <MyButton counter={counter} title="Submit" onClick={handleClick} />
+    </div>
+  );
+}
+```
