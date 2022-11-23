@@ -52,7 +52,19 @@ import LoginForm from './loginForm.js';
 import hello from '/path/to/hello.js';
 ```
 
-Some teams prefer to always use *named exports*. Even if only a single thing is exported, it's still exported under a name, without default.
+Some teams prefer to always use *named exports*, without `export default`: 
+
+```js
+export function MyButton({ name }) {
+  return <button>{name}</button>;
+}
+```
+
+Therefore there is only one way to import this module:
+
+```js
+import { MyButton } from './components/MyButton';
+```
 
 ## Script type "module"
 
