@@ -1,5 +1,13 @@
 # Components
 
+React components should be *capitalized* to distinguish them from plain HTML and JavaScript:
+
+```js
+function Header() {
+  return <h1>Hello</h1>
+}
+```
+
 Type of components:
 
 - **Stateful** (container, smart). Manage state.
