@@ -8,7 +8,7 @@ See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/prox
 
 For Ubuntu: `sudo apt install npm`
 
-See below to install node via `n`.
+See below to install / update node via `n`.
 
 ### Update npm
 
@@ -21,7 +21,7 @@ npm -v
 #=> 8.11.0
 ```
 
-### Update node via `n`
+### Install / update node via `n`
 
 ```bash
 sudo npm install -g n
