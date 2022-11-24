@@ -1,6 +1,12 @@
 # JSX
 
-## Return only single element
+**JSX** is a syntax extension for JavaScript that allows us to describe UI in a familiar HTML-like syntax. 
+
+Note that browsers don’t understand JSX out of the box, so you’ll need a JavaScript compiler, such as a [Babel](https://babeljs.io/), to transform your JSX code into regular JavaScript.
+
+## 3 Rules of JSX
+
+### 1. Return a single root element 
 
 Component can't return multiple JSX tags. You have to wrap them into a shared parent, like a `<div>...</div>` or an empty `<>...</>` wrapper:
 
@@ -13,6 +19,25 @@ function MyApp() {
     </>
   );
 }
+```
+### 2. Close all tags
+
+```js
+<img />
+<MyBytton />
+<br />
+```
+
+### 3. Use `camelCase` for most of the things
+
+JSX turns into JavaScript and attributes written in JSX become keys of JavaScript objects. 
+But JavaScript has limitations on variable names. For example, their names can’t contain dashes or be reserved words like `class`.
+
+This is why, in React, many HTML and SVG attributes are written in camelCase. 
+For example, instead of `stroke-width` you use `strokeWidth`. Since `class` is a reserved word, in React you write `className` instead:
+
+```js
+<div className="card">...</div>
 ```
 
 ## `{}` to escape to JS
