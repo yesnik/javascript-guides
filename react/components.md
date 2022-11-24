@@ -83,13 +83,13 @@ export default App;
 
 *Way 1*. With `bind`.
 
-```js
+```jsx
 <button onClick={this.switchNameHandler.bind(this, 'Lara')}>Switch name</button>
 ```
 
 *Way 2*. With arrow function. *Not recommended* because it can be inefficient.
 
-```js
+```jsx
 <button onClick={() => this.switchNameHandler('Lara')}>Switch name</button>
 ```
 
@@ -97,25 +97,28 @@ export default App;
 
 ### With props
 
-```js
+Regular HTML elements have attributes that you can use to pass pieces of information that change the behavior of those elements. 
+For example, `<img src="" />`, `<a href=""></a>`.
+
+In the same way, we can pass pieces of information as properties to React components. These are called `props`.
+
+```jsx
 // src/Person/Person.js
 import React from "react";
 
-const person = (props) => {
+export function Person(props) {
     return (
         <div>
             <p>I am {props.name} and I'm {props.age} years old!</p>
             <p>{props.children}</p>
         </div>
-    )
+    );
 }
-
-export default person;
 ```
 
 Usage:
 
-```js
+```jsx
 <Person name="Natalie" age="18">
     My hobbies: Lego
 </Person>
@@ -137,7 +140,6 @@ function MyInput({name, placeholder}) {
 export default function App() {
   return (
     <div>
-      <h1>Hello!</h1>
       <MyInput name="student" placeholder="How are you?" />
     </div>
   );
