@@ -42,7 +42,9 @@ For example, instead of `stroke-width` you use `strokeWidth`. Since `class` is a
 
 ## `{}` to escape to JS
 
-Curly braces let you "escape back" into JavaScript so that you can embed some variable:
+We can use curly braces `{}`, a special JSX syntax that allows us to write regular JavaScript directly inside JSX markup.
+
+Curly braces let us "escape back" into JavaScript so that we can embed some variable:
 
 ```jsx
 function Header(props) {
