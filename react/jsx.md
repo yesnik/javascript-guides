@@ -135,6 +135,9 @@ For each item in a list, we should pass a string or a number that uniquely ident
 
 ## Respond to events
 
+In React, event names are camelCased. The `onClick` event is one of many possible events we can use to respond to user interaction. 
+For example, we can use `onChange` for input fields or `onSubmit` for forms.
+
 ```jsx
 export default function MyButton() {
   function handleClick() {
