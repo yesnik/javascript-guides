@@ -13,6 +13,22 @@ with all the features you need for production: hybrid static & server rendering,
   ```bash
   npm run dev
   ```
+  
+## Deploy to production
+
+Run the build script once, which builds the production application in the `.next` folder: 
+
+```bash
+npm run build
+```
+
+After building, the start script starts a Node.js server that supports hybrid pages, serving both statically generated and server-side rendered pages, and API Routes.
+
+```bash
+npm run start
+```
+
+**Tip**: We can customize the start script in `package.json` to accept a `PORT` parameter by updating it as: `"start": "next start -p $PORT"`.
 
 ## Pages
 
