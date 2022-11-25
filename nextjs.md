@@ -99,6 +99,32 @@ import Script from 'next/script';
 />
 ```
 
+## API Routes
+
+API Routes let us create an API endpoint inside a Next.js app. We can do so by creating a function inside the `pages/api` directory.
+File `pages/api/hello.js`:
+
+```jsx
+export default function handler(req, res) {
+  res.status(200).json({ text: 'Hello' });
+}
+```
+
+Try accessing it at http://localhost:3000/api/hello. You should see `{"text":"Hello"}`.
+
+### A Good Use Case: Handling Form Input
+
+We can create a form on a page and have it send a POST request to our API Route. 
+We can then write code to directly save it to the database. 
+The API Route code will not be part of our client bundle, so we can safely write server-side code.
+
+```jsx
+export default function handler(req, res) {
+  const email = req.body.email;
+  // Then save email to your database, etc...
+}
+```
+
 ## Rendering
 
 **Rendering** is a process of converting the code we write in React into the HTML representation of our UI. It can happen either ahead of time at build time, or on every request at runtime.
