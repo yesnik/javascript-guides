@@ -125,6 +125,19 @@ export default function handler(req, res) {
 }
 ```
 
+### Dynamic routes
+
+API route `pages/api/post/[id].js`: 
+
+```jsx
+export default function handler(req, res) {
+  const { id } = req.query
+  res.end(`Post: ${id}`)
+}
+```
+
+URL: http://localhost:3000/api/post/1
+
 ## Rendering
 
 **Rendering** is a process of converting the code we write in React into the HTML representation of our UI. It can happen either ahead of time at build time, or on every request at runtime.
