@@ -44,6 +44,8 @@ import Link from 'next/link';
 
 In a production build of Next.js, whenever `Link` components appear in the browser’s viewport, Next.js automatically prefetches the code for the linked page in the background.
 
+**Note:** If we need to link to an external page outside the Next.js app, just use an `<a>` tag.
+
 ## Rendering
 
 **Rendering** is a process of converting the code we write in React into the HTML representation of our UI. It can happen either ahead of time at build time, or on every request at runtime.
