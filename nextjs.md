@@ -14,6 +14,34 @@ with all the features you need for production: hybrid static & server rendering,
   npm run dev
   ```
 
+## Pages
+
+**Page** is a React Component exported from a file in the `pages` directory.
+
+Pages are associated with a route based on their *file name*:
+
+- `pages/index.js` is associated with the `/` route.
+- `pages/products/cool-book.js` is associated with the `/products/cool-book` route.
+
+Contents of `pages/products/cool-book.js`:
+
+```jsx
+export default function CoolBook() {
+  return <h1>Cool book</h1>
+}
+```
+The component can have any name, but you must export it as a `default` export.
+
+## Components
+
+### Link
+
+```jsx
+import Link from 'next/link';
+
+<Link href="/products/cool-book">Cool book</Link>
+```
+
 ## Rendering
 
 **Rendering** is a process of converting the code we write in React into the HTML representation of our UI. It can happen either ahead of time at build time, or on every request at runtime.
