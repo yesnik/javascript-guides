@@ -3,6 +3,12 @@
 [Next.js](https://nextjs.org/) is a React Framework that gives you the best developer experience 
 with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more.
 
+## Create app
+
+```bash
+npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
+```
+
 ## Rendering
 
 **Rendering** is a process of converting the code we write in React into the HTML representation of our UI. It can happen either ahead of time at build time, or on every request at runtime.
