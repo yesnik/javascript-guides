@@ -119,7 +119,22 @@ Pre-rendering means the HTML is generated in advance, on a server, instead of ha
 
 We can choose the most appropriate rendering method for our use case on a page-by-page basis.
 
-### Static Generation
+### Server-Side Rendering
+
+To use SSR, we need to export `getServerSideProps` instead of `getStaticProps` from our page:
+
+```jsx
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      // props for your component
+    },
+  };
+}
+```
+Parameter `context` contains request specific parameters.
+
+### Static Site Generation
 
 When we export a page component, we can also export an async function called `getStaticProps`. If we do this, then:
 
