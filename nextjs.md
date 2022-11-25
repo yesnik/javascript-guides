@@ -46,6 +46,30 @@ In a production build of Next.js, whenever `Link` components appear in the brows
 
 **Note:** If we need to link to an external page outside the Next.js app, just use an `<a>` tag.
 
+### Image
+
+It's better not to use `<img />` tag, because you have to manually handle:
+
+- Ensuring your image is responsive on different screen sizes
+- Optimizing your images with a third-party tool or library
+- Only loading images when they enter the viewport.
+
+Instead, Next.js provides an `Image` component out of the box to handle this for you.
+Images are lazy loaded by default. Images load as they are scrolled into viewport.
+
+```jsx
+import Image from 'next/image';
+
+const YourComponent = () => (
+  <Image
+    src="/images/profile.jpg" // Route of the image file
+    height={144} // Desired size with correct aspect ratio
+    width={144} // Desired size with correct aspect ratio
+    alt="Your Name"
+  />
+);
+```
+
 ## Rendering
 
 **Rendering** is a process of converting the code we write in React into the HTML representation of our UI. It can happen either ahead of time at build time, or on every request at runtime.
