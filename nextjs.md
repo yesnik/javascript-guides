@@ -34,6 +34,19 @@ The component can have any name, but you must export it as a `default` export.
 
 ## Components
 
+### Head
+
+`<Head>` is a React Component that is built into Next.js. It allows you to modify the `<head>` of a page.
+
+```jsx
+import Head from 'next/head';
+
+<Head>
+  <title>Create Next App</title>
+  <link rel="icon" href="/favicon.ico" />
+</Head>
+```
+
 ### Link
 
 ```jsx
