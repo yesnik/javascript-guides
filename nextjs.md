@@ -83,6 +83,22 @@ const YourComponent = () => (
 );
 ```
 
+### Script
+
+It is an extension of the HTML `<script>` element and optimizes when additional scripts are fetched and executed.
+  
+```jsx
+import Script from 'next/script';
+
+<Script
+  src="https://connect.facebook.net/en_US/sdk.js"
+  strategy="lazyOnload"
+  onLoad={() =>
+    console.log(`script loaded correctly, window.FB has been populated`)
+  }
+/>
+```
+
 ## Rendering
 
 **Rendering** is a process of converting the code we write in React into the HTML representation of our UI. It can happen either ahead of time at build time, or on every request at runtime.
