@@ -118,3 +118,26 @@ transformation of React components into HTML happens *before* the result is sent
 Pre-rendering means the HTML is generated in advance, on a server, instead of having it all done by JavaScript on the user's device.
 
 We can choose the most appropriate rendering method for our use case on a page-by-page basis.
+
+### Static Generation
+
+When we export a page component, we can also export an async function called `getStaticProps`. If we do this, then:
+
+- `getStaticProps` runs at build time in production, and…
+- Inside the function, we can fetch external data and send it as `props` to the page.
+
+```jsx
+export default function Home(props) { ... }
+
+export async function getStaticProps() {
+  // Get external data from the file system, API, DB, etc.
+  const data = ...
+
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: ...
+  }
+}
+```
+Note: In development mode, `getStaticProps` runs on each request instead.
