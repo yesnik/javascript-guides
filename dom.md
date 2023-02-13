@@ -28,10 +28,11 @@ document.querySelectorAll('.item');
 
 ## Document element methods
 
-### classList
+### classList, id
 
 ```js
 const greet = document.createElement('div');
+greet.id = 'main-info';
 greet.classList.add('message');
 greet.textContent = 'Hello';
 
@@ -42,7 +43,7 @@ Result:
 
 ```html
 <div id="root">
-  <div class="message">Hello</div>
+  <div id="main-info" class="message">Hello</div>
 </div>
 ```
 
