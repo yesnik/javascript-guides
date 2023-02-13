@@ -26,3 +26,21 @@ const root = document.getElementById('root')
 root.dataset // DOMStringMap {alias: 'kenny'}
 root.dataset.alias // 'kenny'
 ```
+
+### classList
+
+```js
+const greet = document.createElement('div');
+greet.classList.add('message');
+greet.textContent = 'Hello';
+
+document.getElementById('root').append(greet);
+```
+
+Result:
+
+```html
+<div id="root">
+  <div class="message">Hello</div>
+</div>
+```
