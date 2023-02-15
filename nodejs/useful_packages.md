@@ -40,6 +40,10 @@ Create `.babelrc` configuration file and enable some plugins. To start, you can 
 
 [http-server](https://github.com/http-party/http-server) is a simple, zero-configuration command-line HTTP server.
 
+### json-server
+
+[json-server](https://www.npmjs.com/package/json-server) is a full fake REST API with zero coding. Place your JSON data in `db.json`.
+
 ### Mongoose
 
 [mongoose](https://github.com/Automattic/mongoose/) is ORM for MongoDb 
