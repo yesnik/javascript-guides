@@ -47,6 +47,18 @@ Result:
 </div>
 ```
 
+### className
+
+```js
+greet.className = 'message main';
+```
+
+Result:
+
+```
+<div class="message main">Hello</div>
+```
+
 ### `data-*` attributes
 
 ```html
