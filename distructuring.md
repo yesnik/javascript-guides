@@ -5,11 +5,11 @@ Destructuring is a feature in ECMAScript 6 that enables us to extract values fro
 ## Functions
 
 ```js
-function Greet({name}) {
-    return 'Hi, ' + name
+function Greet({name, age}) {
+    return `Hi ${name}. Your age is ${age}`
 }
 
-Greet({name: 'Kenny'}) // Hi, Kenny
+Greet({name: 'Kenny', age: 19}) // Hi Kenny. Your age is 19
 ```
 
 ## Arrays
@@ -27,9 +27,9 @@ console.log(c) // 3
 ## Objects
 
 ```js
-const {name} = {name: 'Kenny', age: 19}
-console.log(name)
-console.log(age) // ReferenceError: age is not defined
+const {name, age} = {name: 'Kenny', age: 19}
+console.log(name) // 'Kenny'
+console.log(age) // 19
 ```
 ```js
 state = {a: 1, b: 2}
