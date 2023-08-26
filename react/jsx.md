@@ -54,14 +54,18 @@ function Header(props) {
 }
 ```
 
-Use curly braces instead of quotes to "escape into JavaScript" from JSX attributes:
+Use curly braces instead of quotes to "escape into JavaScript" from JSX attributes. We can pass not only `string`, but `bool`, `int`, etc.
 
 ```jsx
 return (
-  <img
-    className="user"
-    src={user.imageUrl}
-  />
+  <div>
+    <img
+      className="user"
+      src={user.imageUrl}
+    />
+
+    <User isActive={false} age={20} />
+  </div>
 );
 ```
 
