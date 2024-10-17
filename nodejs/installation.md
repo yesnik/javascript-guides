@@ -10,6 +10,14 @@ See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/prox
 
 - Ubuntu: `sudo apt install npm`
 - Fedora: `sudo yum install npm`
+- Windows 10 (via [Chocolately](https://community.chocolatey.org/packages?q=node)): `choco install nodejs`
+
+### Update npm
+
+```bash
+npm install -g npm@XX.YY.ZZ
+```
+Replace `XX.YY.ZZ` to the actual version of npm
 
 ### Install / update node via `n`
 
@@ -27,6 +35,7 @@ sudo n latest
 
 ```bash
 mkdir mysite
+cd mysite
 npm init
 ```
 
