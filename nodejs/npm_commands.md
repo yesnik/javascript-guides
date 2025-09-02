@@ -1,6 +1,13 @@
 
 ## NPM commands
 
+- Install dependencies from `package.json`:
+  ```bash
+  npm install
+  # Show more info:
+  npm install --verbose
+  ```
+
 - Install package
   ```bash
   npm install @babel/core
