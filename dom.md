@@ -65,6 +65,16 @@ Result:
 <div class="message main">Hello</div>
 ```
 
+Changing the element's `class` happens through the `className` property.
+That's because the keyword `class` in JavaScript is reserved and is used for creating a JavaScript class that can be called with the `new` operator.
+
+### classList
+
+```js
+greet.classList.add('small');
+greet.classList; // DOMTokenList(3) ['message', 'main', 'small']
+```
+
 ### `data-*` attributes
 
 ```html
