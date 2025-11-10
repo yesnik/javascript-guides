@@ -47,6 +47,12 @@ Result:
 </div>
 ```
 
+### style
+
+```js
+greet.style = 'color: yellow; background-color: green';
+```
+
 ### className
 
 ```js
