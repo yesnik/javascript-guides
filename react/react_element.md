@@ -5,9 +5,9 @@ The `createDivElement` function so that it creates a React Element that represen
 ```jsx
 import React from 'react';
 
-function createDivElement() {
-    return React.createElement('div', {}, 'Hello World!');
-}
+React.createElement('div', {}, 'Hello');
+// <div>Hello</div>
 
-console.log(createDivElement());
+React.createElement('h1', {className: 'title'}, 'Hi')
+// <h1 class="title">Hi</h1>
 ```
