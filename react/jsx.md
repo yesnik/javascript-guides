@@ -23,8 +23,15 @@ function MyApp() {
 ### 2. Close all tags
 
 ```js
-<img />
-<MyBytton />
+const image = <img src="vite.svg" alt=""></img>
+```
+
+Everyone prefers to use the *self-closing tag syntax*:
+
+```js
+const image = <img src="vite.svg" alt="" />
+
+<MyButton />
 <br />
 ```
 
