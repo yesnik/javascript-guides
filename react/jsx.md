@@ -34,6 +34,7 @@ const image = <img src="vite.svg" alt="" />
 <MyButton />
 <br />
 ```
+You will need it most notably for the `img`, `br`, `hr`, `input`, `link`, `meta` elements.
 
 ### 3. Use `camelCase` for most of the things
 
