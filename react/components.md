@@ -3,9 +3,9 @@
 React components should be *capitalized* to distinguish them from plain HTML and JavaScript:
 
 ```js
-function Header() {
+export const Header = () => {
   return <h1>Hello</h1>
-}
+};
 ```
 
 Type of components:
@@ -16,19 +16,15 @@ Type of components:
 ## Stateless component
 
 ```js
-// src/Person/Person.js
-import React from "react";
-
-const person = (props) => {
+// src/Person.js
+export const Person = (props) => {
     return (
         <div>
             <p onClick={props.click}>I am {props.name} and I'm {props.age} years old!</p>
             <p>{props.children}</p>
         </div>
     )
-}
-
-export default person;
+};
 ```
 
 ## Stateful component
@@ -37,7 +33,7 @@ export default person;
 // src/App.js
 import React, { Component } from 'react';
 import './App.css';
-import Person from './Person/Person';
+import { Person } from './Person';
 
 class App extends Component {
     state = {
@@ -103,17 +99,15 @@ For example, `<img src="" />`, `<a href=""></a>`.
 In the same way, we can pass pieces of information as properties to React components. These are called `props`.
 
 ```jsx
-// src/Person/Person.js
-import React from "react";
-
-export function Person(props) {
+// src/Person.js
+export const Person = (props) => {
     return (
         <div>
             <p>I am {props.name} and I'm {props.age} years old!</p>
             <p>{props.children}</p>
         </div>
     );
-}
+};
 ```
 
 Usage:
@@ -131,7 +125,7 @@ With destructuring it will assign the matching property names/values to the pass
 The names must match with the properties.
 
 ```jsx
-function MyInput({name, placeholder}) {
+export const MyInput = ({name, placeholder}) => {
   return (
     <input type="text" name={name} placeholder={placeholder} />
   );
