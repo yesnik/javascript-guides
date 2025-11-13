@@ -4,89 +4,45 @@ React components should be *capitalized* to distinguish them from plain HTML and
 
 ```js
 export const Header = () => {
-  return <h1>Hello</h1>
+  return <h1>Hello</h1>;
 };
 ```
 
-Type of components:
+## Export types
 
-- **Stateful** (container, smart). Manage state.
-- **Stateless** (presentational, dumb). Don't manage state. Try to create components of this type.
+### Default export
 
-## Stateless component
-
-```js
-// src/Person.js
-export const Person = (props) => {
-    return (
-        <div>
-            <p onClick={props.click}>I am {props.name} and I'm {props.age} years old!</p>
-            <p>{props.children}</p>
-        </div>
-    )
-};
-```
-
-## Stateful component
+File `src/Button.jsx`:
 
 ```js
-// src/App.js
-import React, { Component } from 'react';
-import './App.css';
-import { Person } from './Person';
-
-class App extends Component {
-    state = {
-        persons: [
-            {name: 'Kenny', age: 18},
-            {name: 'Leo', age: 28},
-            {name: 'Jenny', age: 21},
-        ]
-    }
-
-    switchNameHandler = (newName) => {
-        this.setState({
-            persons: [
-                {name: newName, age: 30},
-                {name: 'Leo', age: 28},
-                {name: 'Penny', age: 25},
-            ]
-        });
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <button onClick={() => this.switchNameHandler('Londa')}>Switch name</button>
-                
-                <Person
-                    name={this.state.persons[1].name}
-                    age={this.state.persons[1].age}
-                    click={this.switchNameHandler.bind(this, 'Petra')}
-                >
-                    My hobbies: Lego
-                </Person>
-            </div>
-        );
-    }
+const Button = () => {
+  return <button>Click me</button>
 }
 
-export default App;
+export default Button;
 ```
 
-### Pass params to method
+**Note:** It's better to avoid this type of export, because in another file we can choose another name for this component:
 
+```js
+import SuperButton from './Button';
 
-*Way 1*. With `bind`.
-
-```jsx
-<button onClick={this.switchNameHandler.bind(this, 'Lara')}>Switch name</button>
+<SuperButton />
 ```
 
-*Way 2*. With arrow function. *Not recommended* because it can be inefficient.
+### Named export
 
-```jsx
-<button onClick={() => this.switchNameHandler('Lara')}>Switch name</button>
+File `src/Welcome.jsx`:
+
+```js
+export const Welcome = () => {
+  return <h2>Welcome!</h2>
+};
+```
+In another file we can't change name of the imported component:
+
+```js
+import { Welcome } from './Welcome';
 ```
 
 ## Pass params
