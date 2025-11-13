@@ -44,6 +44,7 @@ In another file we can't change name of the imported component:
 ```js
 import { Welcome } from './Welcome';
 ```
+**Note:** This export method leads to much easier debugging and maintenance.
 
 ## Pass params
 
