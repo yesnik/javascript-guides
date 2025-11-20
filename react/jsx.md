@@ -212,3 +212,20 @@ export default function App() {
   );
 }
 ```
+
+## Non standard attributes
+
+### className
+
+```jsx
+<div className="items"></div>
+```
+
+### htmlFor
+
+```jsx
+<p>
+  <label htmlFor="name">Your name</label>
+  <input type="text" id="name" required />
+</p>
+```
