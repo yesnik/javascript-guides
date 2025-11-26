@@ -1,16 +1,20 @@
 # Installation
 
+[Node.js](https://nodejs.org/) is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.
+
 [NPM](https://github.com/npm/cli) is a JavaScript package manager. 
+
+### Install, upgrade npm
+
+- Ubuntu: `sudo apt install npm`
+- Fedora: `sudo yum install npm`
+- Windows 10 (via [Chocolately](https://community.chocolatey.org/packages?q=node)):
+   * `choco install nodejs`
+   * `choco upgrade nodejs`
 
 ### NPM proxy
 
 See [npm proxy settings](https://github.com/yesnik/linux-guides/blob/master/proxy.md#npm-proxy-settings)
-
-### Install npm
-
-- Ubuntu: `sudo apt install npm`
-- Fedora: `sudo yum install npm`
-- Windows 10 (via [Chocolately](https://community.chocolatey.org/packages?q=node)): `choco install nodejs`
 
 ### Update npm
 
