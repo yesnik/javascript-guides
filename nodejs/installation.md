@@ -9,8 +9,9 @@
 - Ubuntu: `sudo apt install npm`
 - Fedora: `sudo yum install npm`
 - Windows 10 (via [Chocolately](https://community.chocolatey.org/packages?q=node)):
-   * `choco install nodejs`
-   * `choco upgrade nodejs`
+   * `choco install nodejs` - install latest version
+   * `choco install nodejs-lts` - install LTS version
+   * `choco upgrade nodejs` - upgrade current version
 
 ### NPM proxy
 
