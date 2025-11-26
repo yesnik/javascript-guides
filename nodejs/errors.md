@@ -18,3 +18,15 @@ Error: listen EACCES: permission denied ::1:5173
 ```
 
 I ran console as admin, but it didn't help.
+
+**Solution:** Change port number from default `5173` to `8000`. Edit `vite.config.js`:
+
+```js
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: "127.0.0.1",
+    port: 8000,
+  },
+});
+```
