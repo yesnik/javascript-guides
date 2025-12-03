@@ -13,6 +13,11 @@ with all the features you need for production: hybrid static & server rendering,
   ```bash
   npm run dev
   ```
+- Build and run production server:
+  ```bash
+  npm run build
+  npm start
+  ```
   
 ## Deploy to production
 
