@@ -5,17 +5,39 @@
 In Python, a function must be defined before it's used. But that's not so in JavaScript! 
 As long as a function is defined somewhere in the file, it can be called even before the definition.
 
-```js
-// Call function before definition
-hi();
+### Function declarations
 
-// Define a function
+```js
+hi(); // ✅ Works
+
 function hi() {
     return 'hi';
 }
 ```
 
 This works because JavaScript ["hoists"](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) the function declaration to the top of the file before the code is executed.
+
+### Function expressions (with `const`, `let`, `var`)
+
+```js
+hi(); // ❌ Error: Uncaught ReferenceError: hi is not defined
+
+const hi = function () {
+    return 'hi';
+};
+```
+
+### Function expressions (with `var`)
+
+```js
+hi; // ❌ Prints: undefined
+
+var hi = function () {
+    return 'hi';
+};
+```
+
+Variable is hoisted. We can read it before the declaration, but it’s `undefined`.
 
 ## Rest parameters
 
