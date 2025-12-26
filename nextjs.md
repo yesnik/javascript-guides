@@ -18,6 +18,10 @@ with all the features you need for production: hybrid static & server rendering,
   npm run build
   npm start
   ```
+- Update dependencies:
+  ```bash
+  npm install next@latest react@latest react-dom@latest eslint@latest eslint-config-next@latest
+  ```
   
 ## Deploy to production
 
