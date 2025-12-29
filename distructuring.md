@@ -32,13 +32,25 @@ console.log(name) // 'Kenny'
 console.log(age) // 19
 ```
 ```js
-state = {a: 1, b: 2}
+const state = {a: 1, b: 2}
 
-newState = {
+const newState = {
   ...state,
   b: 22,
   c: 3
 }
 
 newState // {a: 1, b: 22, c: 3}
+```
+
+```js
+const state = {a: 1, b: 2}
+
+const newState = {
+  b: 22,
+  c: 3,
+  ...state
+}
+
+newState // {b: 2, c: 3, a: 1}
 ```
