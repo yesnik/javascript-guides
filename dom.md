@@ -2,7 +2,7 @@
 
 ## Document methods
 
-### createElement, createTextNode, appendChild, getElementById
+### createElement(), createTextNode(), appendChild(), getElementById()
 
 ```js
 const header = document.createElement('h1');
@@ -19,14 +19,14 @@ it would be helpful if developers were able to declare *what* they want to show.
 
 React is a popular declarative library that helps developers build user interfaces.
 
-### querySelector, 
+### querySelector()
 
 ```js
 document.querySelector('#questions');
 document.querySelector('audio[data-key="65"]');
 ```
 
-## querySelectorAll
+### querySelectorAll()
 
 ```js
 document.querySelectorAll('.item');
