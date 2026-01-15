@@ -19,13 +19,18 @@ it would be helpful if developers were able to declare *what* they want to show.
 
 React is a popular declarative library that helps developers build user interfaces.
 
-### querySelector, querySelectorAll
+### querySelector, 
 
 ```js
 document.querySelector('#questions');
-document.querySelectorAll('.item');
+document.querySelector('audio[data-key="65"]');
 ```
 
+## querySelectorAll
+
+```js
+document.querySelectorAll('.item');
+```
 ## Document element methods
 
 ### classList, id
