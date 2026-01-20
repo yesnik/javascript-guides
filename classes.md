@@ -136,3 +136,36 @@ console.log(Cat.getCatsAmount()); // 2
 // This doesn't work because its not a method on the object
 console.log(tom.getCatsAmount()); // TypeError: tom.getCatsAmount is not a function
 ```
+
+## Getters and Setters
+
+In JavaScript classes, getters and setters let us define special methods for getting and setting the values of properties. 
+They look like regular methods but are accessed like properties. 
+
+Notice that we've renamed `this.name` to `this._name` in our constructor to avoid a name collision with the getter itself.
+
+A setter lets us control what happens when a property is changed. For example, we could validate a user's age to make sure it’s not negative:
+
+```js
+class Student {
+  constructor(name, age) {
+    this.name = name;
+    this._age = age;
+  }
+
+  get age() {
+    return this._age;
+  }
+
+  set age(value) {
+    if (value < 0) {
+      throw new Error("Age can't be negative.");
+    }
+    this._age = value;
+  }
+}
+
+const kenny = new Student("Kenny", 21);
+// kenny.age = -15; // "Error: Age can't be negative."
+console.log(kenny.age); // 21
+```
