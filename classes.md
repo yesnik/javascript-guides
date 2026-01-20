@@ -108,3 +108,31 @@ Encapsulation in JavaScript is typically enforced at two levels:
 
 - The class level: Public/private methods using `#` for private fields
 - The module level: Exporting only what you want to be public
+
+## Static Methods
+
+A [static](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static) method or property is bound to the class itself, not the instance of the class (an object). 
+
+```js
+class Cat {
+  static catsAmount = 0;
+
+  constructor(name) {
+    this.name = name;
+    Cat.catsAmount += 1;
+  }
+
+  static getCatsAmount() {
+    return Cat.catsAmount;
+  }
+}
+
+const tom = new Cat("Tom");
+console.log(Cat.getCatsAmount()); // 1
+
+const don = new Cat("Don");
+console.log(Cat.getCatsAmount()); // 2
+
+// This doesn't work because its not a method on the object
+console.log(tom.getCatsAmount()); // TypeError: tom.getCatsAmount is not a function
+```
