@@ -31,6 +31,10 @@ tom.name // 'Tom'
 tom.getTitle() // 'Cat Tom'
 ```
 
+The `constructor` method is a special method that's called when a new instance of the class (object) is created.
+
+The `new` keyword calls the constructor method and creates a new instance of the class.
+
 ## Inheritance
 
 ```js
@@ -58,3 +62,49 @@ const tom = new Cat();
 console.log(tom.getTitle()) // 'Animal'
 console.log(tom.getType()) // 'Cat'
 ```
+
+## Private properties
+
+We can make a property [private](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) by prefixing it with a hash `#` and declaring it at the top of the class:
+
+```js
+class Movie {
+  #title;
+  constructor(title, rating) {
+    this.#title = title;
+    this.rating = rating;
+  }
+}
+
+const matrixMovie = new Movie("The Matrix", 9.5);
+console.log(matrixMovie.#title); // SyntaxError: Private field '#title' must be declared in an enclosing class
+```
+
+**Note:** Code run in the Chrome console can access private elements outside the class. 
+This is a DevTools-only relaxation of the JavaScript syntax restriction.
+
+Private properties can still be used from within the class:
+
+```js
+class Movie {
+  #title;
+  constructor(title, rating) {
+    this.#title = title;
+    this.rating = rating;
+  }
+
+  getTitleAllCaps() {
+    const allCaps = this.#title.toUpperCase();
+    return allCaps;
+  }
+}
+
+const matrixMovie = new Movie("The Matrix", 9.5);
+console.log(matrixMovie.getTitleAllCaps());
+// THE MATRIX
+```
+
+Encapsulation in JavaScript is typically enforced at two levels:
+
+- The class level: Public/private methods using `#` for private fields
+- The module level: Exporting only what you want to be public
