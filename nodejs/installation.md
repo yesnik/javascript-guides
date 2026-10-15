@@ -4,14 +4,15 @@
 
 [NPM](https://github.com/npm/cli) is a JavaScript package manager. 
 
-### Install, upgrade npm
+### Install, upgrade, uninstall npm
 
 - Ubuntu: `sudo apt install npm`
 - Fedora: `sudo yum install npm`
 - Windows 10 (via [Chocolately](https://community.chocolatey.org/packages?q=node)):
-   * `choco install nodejs` - install latest version
    * `choco install nodejs-lts` - install LTS version
+   * `choco install nodejs` - install latest version
    * `choco upgrade nodejs` - upgrade current version
+   * `choco uninstall nodejs-lts` - uninstall LTS version
 
 ### NPM proxy
 
